@@ -15,7 +15,9 @@ namespace WEBAPI
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
-            builder.Services.AddDbContext<ContactAPIsDbContext>(options => options.UseInMemoryDatabase("ContactsDb"));
+
+            builder.Services.AddDbContext<ContactAPIsDbContext>(options => options.UseInMemoryDatabase("ContactsDb")); /*Connection For InMemoryDatabase*/
+            //builder.Services.AddDbContext<ContactAPIsDbContext>(options => options.UseInMemoryDatabase("ContactsDb"));
 
             var app = builder.Build();
 
